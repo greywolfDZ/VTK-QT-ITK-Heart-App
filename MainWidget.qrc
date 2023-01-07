@@ -1,0 +1,10 @@
+<RCC>
+  <qresource prefix="MainWidget">
+    <file>resource/heart.png</file>
+    <file>resource/R-C (1).jfif</file>
+    <file>resource/R-C.jfif</file>
+    <file>resource/OIP-C.jfif</file>
+    <file>resource/147324b690f696bd07af069777a97340.jpg</file>
+    <file>resource/f18061fc_E446604_47f78510.png</file>
+  </qresource>
+</RCC>

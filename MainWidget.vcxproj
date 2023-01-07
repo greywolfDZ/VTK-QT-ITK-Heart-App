@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A8AB14CB-9CB9-4463-92FA-4A6886A375F6}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0.19041.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <IncludePath>D:\InsightToolkit-5.2.1.tar\itk-install\include\ITK-5.2;D:\VTK-8.2\VTK-install\bin;D:\VTK-8.2\VTK-install;D:\VTK-8.2\VTK-install\include\vtk-8.2;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\InsightToolkit-5.2.1.tar\itk-install\bin;D:\InsightToolkit-5.2.1.tar\itk-install\include\ITK-5.2;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <IncludePath>E:\Anaconda\envs\foo\Library\include\vmtk;D:\InsightToolkit-5.2.1.tar\itk-install\include\ITK-5.2;D:\VTK-8.2\VTK-8.2.0-install\include\vtk-8.2;E:\qt4.5\5.15.2\msvc2019_64\include\QtWidgets;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\Anaconda\envs\foo\Library\include\vmtk;D:\InsightToolkit-5.2.1.tar\itk-install\include\ITK-5.2;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalDependencies>D:\InsightToolkit-5.2.1.tar\itk-install\lib\*.lib;vtkChartsCore-8.2.lib;vtkCommonColor-8.2.lib;vtkCommonComputationalGeometry-8.2.lib;vtkCommonCore-8.2.lib;vtkCommonDataModel-8.2.lib;vtkCommonExecutionModel-8.2.lib;vtkCommonMath-8.2.lib;vtkCommonMisc-8.2.lib;vtkCommonSystem-8.2.lib;vtkCommonTransforms-8.2.lib;vtkDICOMParser-8.2.lib;vtkDomainsChemistry-8.2.lib;vtkDomainsChemistryOpenGL2-8.2.lib;vtkdoubleconversion-8.2.lib;vtkexodusII-8.2.lib;vtkexpat-8.2.lib;vtkFiltersAMR-8.2.lib;vtkFiltersCore-8.2.lib;vtkFiltersExtraction-8.2.lib;vtkFiltersFlowPaths-8.2.lib;vtkFiltersGeneral-8.2.lib;vtkFiltersGeneric-8.2.lib;vtkFiltersGeometry-8.2.lib;vtkFiltersHybrid-8.2.lib;vtkFiltersHyperTree-8.2.lib;vtkFiltersImaging-8.2.lib;vtkFiltersModeling-8.2.lib;vtkFiltersParallel-8.2.lib;vtkFiltersParallelImaging-8.2.lib;vtkFiltersPoints-8.2.lib;vtkFiltersProgrammable-8.2.lib;vtkFiltersSelection-8.2.lib;vtkFiltersSMP-8.2.lib;vtkFiltersSources-8.2.lib;vtkFiltersStatistics-8.2.lib;vtkFiltersTexture-8.2.lib;vtkFiltersTopology-8.2.lib;vtkFiltersVerdict-8.2.lib;vtkfreetype-8.2.lib;vtkglew-8.2.lib;vtkGUISupportQt-8.2.lib;vtkhdf5-8.2.lib;vtkhdf5_hl-8.2.lib;vtkImagingColor-8.2.lib;vtkImagingCore-8.2.lib;vtkImagingFourier-8.2.lib;vtkImagingGeneral-8.2.lib;vtkImagingHybrid-8.2.lib;vtkImagingMath-8.2.lib;vtkImagingSources-8.2.lib;vtkImagingStencil-8.2.lib;vtkInfovisCore-8.2.lib;vtkInteractionStyle-8.2.lib;vtkInteractionWidgets-8.2.lib;vtkIOAMR-8.2.lib;vtkIOCore-8.2.lib;vtkIOExodus-8.2.lib;vtkIOGeometry-8.2.lib;vtkIOImage-8.2.lib;vtkIOInfovis-8.2.lib;vtkIOLegacy-8.2.lib;vtkIONetCDF-8.2.lib;vtkIOParallel-8.2.lib;vtkIOXML-8.2.lib;vtkIOXMLParser-8.2.lib;vtkjpeg-8.2.lib;vtkjsoncpp-8.2.lib;vtklibxml2-8.2.lib;vtklz4-8.2.lib;vtklzma-8.2.lib;vtkmetaio-8.2.lib;vtkNetCDF-8.2.lib;vtkParallelCore-8.2.lib;vtkpng-8.2.lib;vtkRenderingAnnotation-8.2.lib;vtkRenderingContext2D-8.2.lib;vtkRenderingContextOpenGL2-8.2.lib;vtkRenderingCore-8.2.lib;vtkRenderingFreeType-8.2.lib;vtkRenderingLabel-8.2.lib;vtkRenderingOpenGL2-8.2.lib;vtkRenderingVolume-8.2.lib;vtkRenderingVolumeOpenGL2-8.2.lib;vtksys-8.2.lib;vtkTestingGenericBridge-8.2.lib;vtkTestingRendering-8.2.lib;vtktiff-8.2.lib;vtkverdict-8.2.lib;vtkViewsContext2D-8.2.lib;vtkViewsCore-8.2.lib;vtkzlib-8.2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\VTK-8.2\VTK-install\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <AdditionalDependencies>z.lib;zdll.lib;zlib.lib;zlibstatic.lib;vtkChartsCore-8.2.lib;vtkCommonColor-8.2.lib;vtkCommonComputationalGeometry-8.2.lib;vtkCommonCore-8.2.lib;vtkCommonDataModel-8.2.lib;vtkCommonExecutionModel-8.2.lib;vtkCommonMath-8.2.lib;vtkCommonMath-8.2_d.lib;vtkCommonMisc-8.2.lib;vtkCommonSystem-8.2.lib;vtkCommonTransforms-8.2.lib;vtkDICOMParser-8.2.lib;vtkDomainsChemistry-8.2.lib;vtkDomainsChemistryOpenGL2-8.2.lib;vtkdoubleconversion-8.2.lib;vtkexodusII-8.2.lib;vtkexpat-8.2.lib;vtkFiltersAMR-8.2.lib;vtkFiltersCore-8.2.lib;vtkFiltersExtraction-8.2.lib;vtkFiltersFlowPaths-8.2.lib;vtkFiltersGeneral-8.2.lib;vtkFiltersGeneric-8.2.lib;vtkFiltersGeometry-8.2.lib;vtkFiltersHybrid-8.2.lib;vtkFiltersHyperTree-8.2.lib;vtkFiltersImaging-8.2.lib;vtkFiltersModeling-8.2.lib;vtkFiltersParallel-8.2.lib;vtkFiltersParallelImaging-8.2.lib;vtkFiltersPoints-8.2.lib;vtkFiltersProgrammable-8.2.lib;vtkFiltersSelection-8.2.lib;vtkFiltersSMP-8.2.lib;vtkFiltersSources-8.2.lib;vtkFiltersStatistics-8.2.lib;vtkFiltersTexture-8.2.lib;vtkFiltersTopology-8.2.lib;vtkFiltersVerdict-8.2.lib;vtkfreetype-8.2.lib;vtkGeovisCore-8.2.lib;vtkgl2ps-8.2.lib;vtkglew-8.2.lib;vtkGUISupportQt-8.2.lib;vtkGUISupportQtSQL-8.2.lib;vtkhdf5-8.2.lib;vtkhdf5_hl-8.2.lib;vtkImagingColor-8.2.lib;vtkImagingCore-8.2.lib;vtkImagingFourier-8.2.lib;vtkImagingGeneral-8.2.lib;vtkImagingHybrid-8.2.lib;vtkImagingMath-8.2.lib;vtkImagingMorphological-8.2.lib;vtkImagingSources-8.2.lib;vtkImagingStatistics-8.2.lib;vtkImagingStencil-8.2.lib;vtkInfovisCore-8.2.lib;vtkInfovisLayout-8.2.lib;vtkInteractionImage-8.2.lib;vtkInteractionStyle-8.2.lib;vtkInteractionWidgets-8.2.lib;vtkIOAMR-8.2.lib;vtkIOAsynchronous-8.2.lib;vtkIOCityGML-8.2.lib;vtkIOCore-8.2.lib;vtkIOEnSight-8.2.lib;vtkIOExodus-8.2.lib;vtkIOExport-8.2.lib;vtkIOExportOpenGL2-8.2.lib;vtkIOExportPDF-8.2.lib;vtkIOGeometry-8.2.lib;vtkIOImage-8.2.lib;vtkIOImport-8.2.lib;vtkIOInfovis-8.2.lib;vtkIOLegacy-8.2.lib;vtkIOLSDyna-8.2.lib;vtkIOMINC-8.2.lib;vtkIOMovie-8.2.lib;vtkIONetCDF-8.2.lib;vtkIOParallel-8.2.lib;vtkIOParallelXML-8.2.lib;vtkIOPLY-8.2.lib;vtkIOSegY-8.2.lib;vtkIOSQL-8.2.lib;vtkIOTecplotTable-8.2.lib;vtkIOVeraOut-8.2.lib;vtkIOVideo-8.2.lib;vtkIOXML-8.2.lib;vtkIOXMLParser-8.2.lib;vtkjpeg-8.2.lib;vtkjsoncpp-8.2.lib;vtklibharu-8.2.lib;vtklibxml2-8.2.lib;vtklz4-8.2.lib;vtklzma-8.2.lib;vtkmetaio-8.2.lib;vtkNetCDF-8.2.lib;vtkogg-8.2.lib;vtkParallelCore-8.2.lib;vtkpng-8.2.lib;vtkproj-8.2.lib;vtkpugixml-8.2.lib;vtkRenderingAnnotation-8.2.lib;vtkRenderingContext2D-8.2.lib;vtkRenderingContextOpenGL2-8.2.lib;vtkRenderingCore-8.2.lib;vtkRenderingFreeType-8.2.lib;vtkRenderingGL2PSOpenGL2-8.2.lib;vtkRenderingImage-8.2.lib;vtkRenderingLabel-8.2.lib;vtkRenderingLOD-8.2.lib;vtkRenderingOpenGL2-8.2.lib;vtkRenderingQt-8.2.lib;vtkRenderingVolume-8.2.lib;vtkRenderingVolumeOpenGL2-8.2.lib;vtksqlite-8.2.lib;vtksys-8.2.lib;vtktheora-8.2.lib;vtktiff-8.2.lib;vtkverdict-8.2.lib;vtkViewsContext2D-8.2.lib;vtkViewsCore-8.2.lib;vtkViewsInfovis-8.2.lib;vtkViewsQt-8.2.lib;vtkzlib-8.2.lib;bzip2.lib;bzip2_static.lib;freetype.lib;hdf5.lib;hdf5_cpp.lib;hdf5_hl.lib;hdf5_hl_cpp.lib;hdf5_tools.lib;ITKBiasCorrection-5.2.lib;ITKColormap-5.2.lib;ITKCommon-5.2.lib;ITKConvolution-5.2.lib;ITKDeformableMesh-5.2.lib;ITKDenoising-5.2.lib;ITKDICOMParser-5.2.lib;ITKDiffusionTensorImage-5.2.lib;itkdouble-conversion-5.2.lib;ITKEXPAT-5.2.lib;ITKFastMarching-5.2.lib;ITKFFT-5.2.lib;itkgdcmcharls-5.2.lib;itkgdcmCommon-5.2.lib;itkgdcmDICT-5.2.lib;itkgdcmDSED-5.2.lib;itkgdcmIOD-5.2.lib;itkgdcmjpeg12-5.2.lib;itkgdcmjpeg16-5.2.lib;itkgdcmjpeg8-5.2.lib;itkgdcmMEXD-5.2.lib;itkgdcmMSFF-5.2.lib;itkgdcmopenjp2-5.2.lib;itkgdcmsocketxx-5.2.lib;ITKgiftiio-5.2.lib;itkhdf5-shared-5.2.lib;itkhdf5-shared-5.2_D.lib;itkhdf5_cpp-shared-5.2.lib;itkhdf5_cpp-shared-5.2_D.lib;ITKImageFeature-5.2.lib;ITKImageIntensity-5.2.lib;ITKIOBioRad-5.2.lib;ITKIOBMP-5.2.lib;ITKIOBruker-5.2.lib;ITKIOCSV-5.2.lib;ITKIOGDCM-5.2.lib;ITKIOGE-5.2.lib;ITKIOGIPL-5.2.lib;ITKIOHDF5-5.2.lib;ITKIOImageBase-5.2.lib;ITKIOIPL-5.2.lib;ITKIOJPEG-5.2.lib;ITKIOJPEG2000-5.2.lib;ITKIOLSM-5.2.lib;ITKIOMeshBase-5.2.lib;ITKIOMeshBYU-5.2.lib;ITKIOMeshFreeSurfer-5.2.lib;ITKIOMeshGifti-5.2.lib;ITKIOMeshOBJ-5.2.lib;ITKIOMeshOFF-5.2.lib;ITKIOMeshVTK-5.2.lib;ITKIOMeta-5.2.lib;ITKIOMINC-5.2.lib;ITKIOMRC-5.2.lib;ITKIONIFTI-5.2.lib;ITKIONRRD-5.2.lib;ITKIOPNG-5.2.lib;ITKIOSiemens-5.2.lib;ITKIOSpatialObjects-5.2.lib;ITKIOStimulate-5.2.lib;ITKIOTIFF-5.2.lib;ITKIOTransformBase-5.2.lib;ITKIOTransformHDF5-5.2.lib;ITKIOTransformInsightLegacy-5.2.lib;ITKIOTransformMatlab-5.2.lib;ITKIOVTK-5.2.lib;ITKIOXML-5.2.lib;itkjpeg-5.2.lib;ITKKLMRegionGrowing-5.2.lib;ITKLabelMap-5.2.lib;itklbfgs-5.2.lib;ITKMarkovRandomFieldsClassifiers-5.2.lib;ITKMathematicalMorphology-5.2.lib;ITKMesh-5.2.lib;ITKMetaIO-5.2.lib;itkminc2-5.2.lib;itkNetlibSlatec-5.2.lib;ITKniftiio-5.2.lib;ITKNrrdIO-5.2.lib;itkopenjpeg-5.2.lib;ITKOptimizers-5.2.lib;ITKOptimizersv4-5.2.lib;ITKPath-5.2.lib;ITKPDEDeformableRegistration-5.2.lib;itkpng-5.2.lib;ITKPolynomials-5.2.lib;ITKQuadEdgeMesh-5.2.lib;ITKQuadEdgeMeshFiltering-5.2.lib;ITKRegionGrowing-5.2.lib;ITKRegistrationMethodsv4-5.2.lib;ITKSmoothing-5.2.lib;ITKSpatialObjects-5.2.lib;ITKStatistics-5.2.lib;itksys-5.2.lib;ITKTestKernel-5.2.lib;itktestlib-5.2.lib;itktiff-5.2.lib;ITKTransform-5.2.lib;ITKTransformFactory-5.2.lib;itkv3p_netlib-5.2.lib;itkvcl-5.2.lib;ITKVideoCore-5.2.lib;ITKVideoIO-5.2.lib;itkvnl-5.2.lib;ITKVNLInstantiation-5.2.lib;itkvnl_algo-5.2.lib;ITKVTK-5.2.lib;ITKVtkGlue-5.2.lib;ITKWatersheds-5.2.lib;itkzlib-5.2.lib;ITKznz-5.2.lib;jpeg.lib;libbz2.lib;libbz2_static.lib;libitkhdf5.lib;libitkhdf5_cpp.lib;libjpeg.lib;libpng.lib;libpng16.lib;libpng16_static.lib;libpng_static.lib;libtiff.lib;libtiff_i.lib;nl.lib;tiff.lib;vtkalglib-8.1.lib;vtkChartsCore-8.1.lib;vtkChartsCorePython36D-8.1.lib;vtkCommonColor-8.1.lib;vtkCommonColorPython36D-8.1.lib;vtkCommonComputationalGeometry-8.1.lib;vtkCommonComputationalGeometryPython36D-8.1.lib;vtkCommonCore-8.1.lib;vtkCommonCorePython36D-8.1.lib;vtkCommonDataModel-8.1.lib;vtkCommonDataModelPython36D-8.1.lib;vtkCommonExecutionModel-8.1.lib;vtkCommonExecutionModelPython36D-8.1.lib;vtkCommonMath-8.1.lib;vtkCommonMathPython36D-8.1.lib;vtkCommonMisc-8.1.lib;vtkCommonMiscPython36D-8.1.lib;vtkCommonSystem-8.1.lib;vtkCommonSystemPython36D-8.1.lib;vtkCommonTransforms-8.1.lib;vtkCommonTransformsPython36D-8.1.lib;vtkDICOMParser-8.1.lib;vtkDomainsChemistry-8.1.lib;vtkDomainsChemistryOpenGL2-8.1.lib;vtkDomainsChemistryOpenGL2Python36D-8.1.lib;vtkDomainsChemistryPython36D-8.1.lib;vtkexoIIc-8.1.lib;vtkexpat-8.1.lib;vtkFiltersAMR-8.1.lib;vtkFiltersAMRPython36D-8.1.lib;vtkFiltersCore-8.1.lib;vtkFiltersCorePython36D-8.1.lib;vtkFiltersExtraction-8.1.lib;vtkFiltersExtractionPython36D-8.1.lib;vtkFiltersFlowPaths-8.1.lib;vtkFiltersFlowPathsPython36D-8.1.lib;vtkFiltersGeneral-8.1.lib;vtkFiltersGeneralPython36D-8.1.lib;vtkFiltersGeneric-8.1.lib;vtkFiltersGenericPython36D-8.1.lib;vtkFiltersGeometry-8.1.lib;vtkFiltersGeometryPython36D-8.1.lib;vtkFiltersHybrid-8.1.lib;vtkFiltersHybridPython36D-8.1.lib;vtkFiltersHyperTree-8.1.lib;vtkFiltersHyperTreePython36D-8.1.lib;vtkFiltersImaging-8.1.lib;vtkFiltersImagingPython36D-8.1.lib;vtkFiltersModeling-8.1.lib;vtkFiltersModelingPython36D-8.1.lib;vtkFiltersParallel-8.1.lib;vtkFiltersParallelImaging-8.1.lib;vtkFiltersParallelImagingPython36D-8.1.lib;vtkFiltersParallelPython36D-8.1.lib;vtkFiltersPoints-8.1.lib;vtkFiltersPointsPython36D-8.1.lib;vtkFiltersProgrammable-8.1.lib;vtkFiltersProgrammablePython36D-8.1.lib;vtkFiltersPython-8.1.lib;vtkFiltersPythonPython36D-8.1.lib;vtkFiltersSelection-8.1.lib;vtkFiltersSelectionPython36D-8.1.lib;vtkFiltersSMP-8.1.lib;vtkFiltersSMPPython36D-8.1.lib;vtkFiltersSources-8.1.lib;vtkFiltersSourcesPython36D-8.1.lib;vtkFiltersStatistics-8.1.lib;vtkFiltersStatisticsPython36D-8.1.lib;vtkFiltersTexture-8.1.lib;vtkFiltersTexturePython36D-8.1.lib;vtkFiltersTopology-8.1.lib;vtkFiltersTopologyPython36D-8.1.lib;vtkFiltersVerdict-8.1.lib;vtkFiltersVerdictPython36D-8.1.lib;vtkfreetype-8.1.lib;vtkGeovisCore-8.1.lib;vtkGeovisCorePython36D-8.1.lib;vtkgl2ps-8.1.lib;vtkglew-8.1.lib;vtkhdf5-8.1.lib;vtkhdf5_hl-8.1.lib;vtkImagingColor-8.1.lib;vtkImagingColorPython36D-8.1.lib;vtkImagingCore-8.1.lib;vtkImagingCorePython36D-8.1.lib;vtkImagingFourier-8.1.lib;vtkImagingFourierPython36D-8.1.lib;vtkImagingGeneral-8.1.lib;vtkImagingGeneralPython36D-8.1.lib;vtkImagingHybrid-8.1.lib;vtkImagingHybridPython36D-8.1.lib;vtkImagingMath-8.1.lib;vtkImagingMathPython36D-8.1.lib;vtkImagingMorphological-8.1.lib;vtkImagingMorphologicalPython36D-8.1.lib;vtkImagingSources-8.1.lib;vtkImagingSourcesPython36D-8.1.lib;vtkImagingStatistics-8.1.lib;vtkImagingStatisticsPython36D-8.1.lib;vtkImagingStencil-8.1.lib;vtkImagingStencilPython36D-8.1.lib;vtkInfovisCore-8.1.lib;vtkInfovisCorePython36D-8.1.lib;vtkInfovisLayout-8.1.lib;vtkInfovisLayoutPython36D-8.1.lib;vtkInteractionImage-8.1.lib;vtkInteractionImagePython36D-8.1.lib;vtkInteractionStyle-8.1.lib;vtkInteractionStylePython36D-8.1.lib;vtkInteractionWidgets-8.1.lib;vtkInteractionWidgetsPython36D-8.1.lib;vtkIOAMR-8.1.lib;vtkIOAMRPython36D-8.1.lib;vtkIOCore-8.1.lib;vtkIOCorePython36D-8.1.lib;vtkIOEnSight-8.1.lib;vtkIOEnSightPython36D-8.1.lib;vtkIOExodus-8.1.lib;vtkIOExodusPython36D-8.1.lib;vtkIOExport-8.1.lib;vtkIOExportOpenGL2-8.1.lib;vtkIOExportOpenGL2Python36D-8.1.lib;vtkIOExportPython36D-8.1.lib;vtkIOGeometry-8.1.lib;vtkIOGeometryPython36D-8.1.lib;vtkIOImage-8.1.lib;vtkIOImagePython36D-8.1.lib;vtkIOImport-8.1.lib;vtkIOImportPython36D-8.1.lib;vtkIOInfovis-8.1.lib;vtkIOInfovisPython36D-8.1.lib;vtkIOLegacy-8.1.lib;vtkIOLegacyPython36D-8.1.lib;vtkIOLSDyna-8.1.lib;vtkIOLSDynaPython36D-8.1.lib;vtkIOMINC-8.1.lib;vtkIOMINCPython36D-8.1.lib;vtkIOMovie-8.1.lib;vtkIOMoviePython36D-8.1.lib;vtkIONetCDF-8.1.lib;vtkIONetCDFPython36D-8.1.lib;vtkIOParallel-8.1.lib;vtkIOParallelPython36D-8.1.lib;vtkIOParallelXML-8.1.lib;vtkIOParallelXMLPython36D-8.1.lib;vtkIOPLY-8.1.lib;vtkIOPLYPython36D-8.1.lib;vtkIOSQL-8.1.lib;vtkIOSQLPython36D-8.1.lib;vtkIOTecplotTable-8.1.lib;vtkIOTecplotTablePython36D-8.1.lib;vtkIOVideo-8.1.lib;vtkIOVideoPython36D-8.1.lib;vtkIOXML-8.1.lib;vtkIOXMLParser-8.1.lib;vtkIOXMLParserPython36D-8.1.lib;vtkIOXMLPython36D-8.1.lib;vtkjpeg-8.1.lib;vtkjsoncpp-8.1.lib;vtklibharu-8.1.lib;vtklibxml2-8.1.lib;vtklz4-8.1.lib;vtkmetaio-8.1.lib;vtkNetCDF-8.1.lib;vtknetcdfcpp-8.1.lib;vtkoggtheora-8.1.lib;vtkParallelCore-8.1.lib;vtkParallelCorePython36D-8.1.lib;vtkpng-8.1.lib;vtkproj4-8.1.lib;vtkPythonInterpreter-8.1.lib;vtkPythonInterpreterPython36D-8.1.lib;vtkRenderingAnnotation-8.1.lib;vtkRenderingAnnotationPython36D-8.1.lib;vtkRenderingContext2D-8.1.lib;vtkRenderingContext2DPython36D-8.1.lib;vtkRenderingContextOpenGL2-8.1.lib;vtkRenderingContextOpenGL2Python36D-8.1.lib;vtkRenderingCore-8.1.lib;vtkRenderingCorePython36D-8.1.lib;vtkRenderingFreeType-8.1.lib;vtkRenderingFreeTypePython36D-8.1.lib;vtkRenderingGL2PSOpenGL2-8.1.lib;vtkRenderingGL2PSOpenGL2Python36D-8.1.lib;vtkRenderingImage-8.1.lib;vtkRenderingImagePython36D-8.1.lib;vtkRenderingLabel-8.1.lib;vtkRenderingLabelPython36D-8.1.lib;vtkRenderingLOD-8.1.lib;vtkRenderingLODPython36D-8.1.lib;vtkRenderingMatplotlib-8.1.lib;vtkRenderingMatplotlibPython36D-8.1.lib;vtkRenderingOpenGL2-8.1.lib;vtkRenderingOpenGL2Python36D-8.1.lib;vtkRenderingVolume-8.1.lib;vtkRenderingVolumeOpenGL2-8.1.lib;vtkRenderingVolumeOpenGL2Python36D-8.1.lib;vtkRenderingVolumePython36D-8.1.lib;vtksqlite-8.1.lib;vtksys-8.1.lib;vtktiff-8.1.lib;vtkverdict-8.1.lib;vtkViewsContext2D-8.1.lib;vtkViewsContext2DPython36D-8.1.lib;vtkViewsCore-8.1.lib;vtkViewsCorePython36D-8.1.lib;vtkViewsInfovis-8.1.lib;vtkViewsInfovisPython36D-8.1.lib;vtkvmtkCommon.lib;vtkvmtkCommonPythonD.lib;vtkvmtkComputationalGeometry.lib;vtkvmtkComputationalGeometryPythonD.lib;vtkvmtkContrib.lib;vtkvmtkContribPythonD.lib;vtkvmtkDifferentialGeometry.lib;vtkvmtkDifferentialGeometryPythonD.lib;vtkvmtkIO.lib;vtkvmtkIOPythonD.lib;vtkvmtkITK.lib;vtkvmtkITKPythonD.lib;vtkvmtkMisc.lib;vtkvmtkMiscPythonD.lib;vtkvmtkRendering.lib;vtkvmtkRenderingPythonD.lib;vtkvmtkSegmentation.lib;vtkvmtkSegmentationPythonD.lib;vtkWrappingPython36Core-8.1.lib;vtkWrappingTools-8.1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\InsightToolkit-5.2.1.tar\itk-install\lib;E:\Anaconda\envs\foo\Library\lib;D:\VTK-8.2\VTK-8.2.0-install\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <StackReserveSize>
+      </StackReserveSize>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\xueguan\Centerline.cpp" />
+    <ClCompile Include="..\xueguan\interactorStyleCenterline.cpp" />
+    <ClCompile Include="CropWidget.cpp" />
+    <ClCompile Include="Gpumake.cpp" />
+    <ClCompile Include="Gpuwidget.cpp" />
+    <ClCompile Include="Showdicom.cpp" />
+    <ClCompile Include="XueGuan.cpp" />
+    <QtRcc Include="MainWidget.qrc" />
+    <QtUic Include="CropWidget.ui" />
+    <QtUic Include="MainWidget.ui" />
+    <QtMoc Include="MainWidget.h" />
+    <ClCompile Include="MainWidget.cpp" />
+    <ClCompile Include="main.cpp" />
+    <QtUic Include="Widget.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\xueguan\Centerline.h" />
+    <ClInclude Include="..\xueguan\interactorStyleCenterline.h" />
+    <ClInclude Include="xueguan3.h" />
+    <QtMoc Include="CropWidget.h" />
+    <ClInclude Include="Gpumake.h" />
+    <ClInclude Include="Gpuwidget.h" />
+    <ClInclude Include="Mycall.h" />
+    <ClInclude Include="Mycallback.h" />
+    <ClInclude Include="PointPickerInteractorStyle .h" />
+    <ClInclude Include="Showdicom.h" />
+    <ClInclude Include="XueGuan.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\Eigen3.3.3.9\build\native\Eigen3.targets" Condition="Exists('packages\Eigen3.3.3.9\build\native\Eigen3.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Eigen3.3.3.9\build\native\Eigen3.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Eigen3.3.3.9\build\native\Eigen3.targets'))" />
+  </Target>
+</Project>

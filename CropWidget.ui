@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form2</class>
+ <widget class="QWidget" name="Form2">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>934</width>
+    <height>662</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>blood vessels</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MainWidget.qrc">
+    <normaloff>:/MainWidget/resource/heart.png</normaloff>:/MainWidget/resource/heart.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/MainWidget/resource/OIP-C.jfif);
+background-color: rgb(208, 226, 255);</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="3">
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="styleSheet">
+      <string notr="true">*{background-color: rgba(0, 55, 55,30%);
+border: 2px solid rgba(20, 65, 60,40%);}</string>
+     </property>
+     <property name="text">
+      <string>提取中心线</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QPushButton" name="pushButton">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{background-color: rgba(0, 55, 55,30%);
+border: 2px solid rgba(20, 65, 60,40%);}</string>
+     </property>
+     <property name="text">
+      <string>截面显示</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <property name="autoDefault">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="2">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="4">
+    <spacer name="horizontalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="0" colspan="5">
+    <widget class="QVTKWidget" name="qvtkWidget"/>
+   </item>
+  </layout>
+  <zorder>qvtkWidget</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>horizontalSpacer</zorder>
+  <zorder>horizontalSpacer_2</zorder>
+  <zorder>horizontalSpacer_3</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKWidget</class>
+   <extends>QWidget</extends>
+   <header>QVTKWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="MainWidget.qrc"/>
+ </resources>
+ <connections/>
+</ui>

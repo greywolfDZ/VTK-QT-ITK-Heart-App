@@ -1,0 +1,2 @@
+D:\Final_HW\MainWidget\x64\Release\MainWidget.exe
+D:\Final_HW\ShowDicom\x64\Release\MainWidget.exe

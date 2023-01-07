@@ -1,0 +1,17 @@
+﻿  Centerline.cpp
+  interactorStyleCenterline.cpp
+  CropWidget.cpp
+  Gpumake.cpp
+  Gpuwidget.cpp
+  Showdicom.cpp
+  XueGuan.cpp
+  MainWidget.cpp
+  main.cpp
+D:\Final_HW\xueguan\Centerline.h(11,10): fatal error C1083: 无法打开包括文件: “vtkvmtkCapPolyData.h”: No such file or directory (编译源文件 ..\xueguan\Centerline.cpp)
+D:\Final_HW\ShowDicom\Gpumake.h(16,9): fatal error C1083: 无法打开包括文件: “vtkOBJExporter.h”: No such file or directory (编译源文件 Gpumake.cpp)
+D:\Final_HW\ShowDicom\XueGuan.h(31,10): fatal error C1083: 无法打开包括文件: “vtkvmtkCenterlineAttributesFilter.h”: No such file or directory (编译源文件 XueGuan.cpp)
+D:\Final_HW\xueguan\Centerline.h(11,10): fatal error C1083: 无法打开包括文件: “vtkvmtkCapPolyData.h”: No such file or directory (编译源文件 ..\xueguan\interactorStyleCenterline.cpp)
+D:\Final_HW\ShowDicom\CropWidget.h(12,10): fatal error C1083: 无法打开包括文件: “vtkLODActor.h”: No such file or directory (编译源文件 CropWidget.cpp)
+D:\Final_HW\ShowDicom\Gpumake.h(16,9): fatal error C1083: 无法打开包括文件: “vtkOBJExporter.h”: No such file or directory (编译源文件 Gpuwidget.cpp)
+D:\Final_HW\ShowDicom\MainWidget.h(13,9): fatal error C1083: 无法打开包括文件: “vtkResliceImageViewer.h”: No such file or directory (编译源文件 main.cpp)
+D:\Final_HW\ShowDicom\MainWidget.h(13,9): fatal error C1083: 无法打开包括文件: “vtkResliceImageViewer.h”: No such file or directory (编译源文件 MainWidget.cpp)

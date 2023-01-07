@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWidgetClass</class>
+ <widget class="QMainWindow" name="MainWidgetClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1133</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWidget</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="MainWidget.qrc">
+    <normaloff>:/MainWidget/resource/heart.png</normaloff>:/MainWidget/resource/heart.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralWidget{background-image: url(:/MainWidget/resource/OIP-C.jfif);}</string>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="7">
+     <spacer name="horizontalSpacer_12">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="2">
+     <spacer name="horizontalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="2" column="1">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="10" column="8">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="1">
+     <widget class="QSlider" name="horizontalSlider">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="label_31">
+      <property name="styleSheet">
+       <string notr="true">font: 63 9pt &quot;Bahnschrift SemiBold&quot;;</string>
+      </property>
+      <property name="text">
+       <string>windowvalue</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="6">
+     <spacer name="horizontalSpacer_11">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="8" column="0" colspan="2">
+     <widget class="QLabel" name="label_19">
+      <property name="styleSheet">
+       <string notr="true">font: 63 9pt &quot;Bahnschrift SemiBold&quot;;</string>
+      </property>
+      <property name="text">
+       <string>description</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="8">
+     <spacer name="horizontalSpacer_13">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="5">
+     <spacer name="horizontalSpacer_8">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="5" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_12">
+        <property name="styleSheet">
+         <string notr="true">font: 63 9pt &quot;Bahnschrift SemiBold&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Name</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_13">
+        <property name="styleSheet">
+         <string notr="true">font: 63 9pt &quot;Bahnschrift SemiBold&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Sex</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_17">
+        <property name="styleSheet">
+         <string notr="true">font: 63 9pt &quot;Bahnschrift SemiBold&quot;;</string>
+        </property>
+        <property name="text">
+         <string>ID</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_22">
+        <property name="styleSheet">
+         <string notr="true">font: 63 9pt &quot;Bahnschrift SemiBold&quot;;</string>
+        </property>
+        <property name="text">
+         <string>age</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="5" column="1">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label_21">
+        <property name="styleSheet">
+         <string notr="true">*{background-color: rgba(0, 25, 25,10%);
+border: 2px solid rgba(20, 65, 60,40%);}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_24">
+        <property name="styleSheet">
+         <string notr="true">*{background-color: rgba(0, 25, 25,10%);
+border: 2px solid rgba(20, 65, 60,40%);}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_26">
+        <property name="styleSheet">
+         <string notr="true">*{background-color: rgba(0, 25, 25,10%);
+border: 2px solid rgba(20, 65, 60,40%);}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_25">
+        <property name="styleSheet">
+         <string notr="true">*{background-color: rgba(0, 25, 25,10%);
+border: 2px solid rgba(20, 65, 60,40%);}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="1">
+     <widget class="QSlider" name="horizontalSlider_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="styleSheet">
+       <string notr="true">font: 63 9pt &quot;Bahnschrift SemiBold&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Level</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">font: 63 9pt &quot;Bahnschrift SemiBold&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Window</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <spacer name="horizontalSpacer_9">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="0">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="3">
+     <spacer name="horizontalSpacer_10">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="4" column="1">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="QLabel" name="label_32">
+      <property name="styleSheet">
+       <string notr="true">font: 63 9pt &quot;Bahnschrift SemiBold&quot;;</string>
+      </property>
+      <property name="text">
+       <string>levelvalue</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <spacer name="horizontalSpacer_4">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="6" column="0" rowspan="2">
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_16">
+        <property name="styleSheet">
+         <string notr="true">font: 63 9pt &quot;Bahnschrift SemiBold&quot;;</string>
+        </property>
+        <property name="text">
+         <string>modility</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_14">
+        <property name="styleSheet">
+         <string notr="true">font: 63 9pt &quot;Bahnschrift SemiBold&quot;;</string>
+        </property>
+        <property name="text">
+         <string>time</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_15">
+        <property name="styleSheet">
+         <string notr="true">font: 63 9pt &quot;Bahnschrift SemiBold&quot;;</string>
+        </property>
+        <property name="text">
+         <string>hospital</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_18">
+        <property name="styleSheet">
+         <string notr="true">font: 63 9pt &quot;Bahnschrift SemiBold&quot;;</string>
+        </property>
+        <property name="text">
+         <string>manufacture</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="6" column="1" rowspan="2">
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_28">
+        <property name="styleSheet">
+         <string notr="true">*{background-color: rgba(0, 25, 25,10%);
+border: 2px solid rgba(20, 65, 60,40%);}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_27">
+        <property name="styleSheet">
+         <string notr="true">*{background-color: rgba(0, 25, 25,10%);
+border: 2px solid rgba(20, 65, 60,40%);}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_30">
+        <property name="styleSheet">
+         <string notr="true">*{background-color: rgba(0, 25, 25,10%);
+border: 2px solid rgba(20, 65, 60,40%);}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_23">
+        <property name="styleSheet">
+         <string notr="true">*{background-color: rgba(0, 25, 25,10%);
+border: 2px solid rgba(20, 65, 60,40%);}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="9" column="0" rowspan="2" colspan="2">
+     <widget class="QLabel" name="label_29">
+      <property name="styleSheet">
+       <string notr="true">*{background-color: rgba(0, 25, 25,10%);
+border: 2px solid rgba(20, 65, 60,40%);}
+
+
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="2" rowspan="10" colspan="7">
+     <widget class="QVTKWidget" name="qvtkWidget"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1133</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>设置</string>
+    </property>
+    <widget class="QMenu" name="menuslice">
+     <property name="title">
+      <string>slice</string>
+     </property>
+     <addaction name="actionslice_x"/>
+     <addaction name="actionslice_y"/>
+     <addaction name="actionslice_z"/>
+    </widget>
+    <widget class="QMenu" name="menuwindow">
+     <property name="title">
+      <string>window</string>
+     </property>
+     <addaction name="actionvalue"/>
+     <addaction name="actionmax"/>
+     <addaction name="actionminvalue"/>
+    </widget>
+    <widget class="QMenu" name="menulevel">
+     <property name="title">
+      <string>level</string>
+     </property>
+     <addaction name="actionvalue_2"/>
+     <addaction name="actionvalue_max"/>
+     <addaction name="actionvalue_min"/>
+    </widget>
+    <addaction name="menuslice"/>
+    <addaction name="separator"/>
+    <addaction name="menuwindow"/>
+    <addaction name="menulevel"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menu_O">
+    <property name="title">
+     <string>打开</string>
+    </property>
+    <addaction name="openaction"/>
+   </widget>
+   <widget class="QMenu" name="menu_Q">
+    <property name="title">
+     <string>退出</string>
+    </property>
+    <addaction name="closeaction"/>
+   </widget>
+   <widget class="QMenu" name="menu_X">
+    <property name="title">
+     <string>工具</string>
+    </property>
+    <addaction name="action_X"/>
+    <addaction name="cropaction"/>
+   </widget>
+   <widget class="QMenu" name="menu_C">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_O"/>
+   <addaction name="menu_Q"/>
+   <addaction name="menu_X"/>
+   <addaction name="menu_C"/>
+  </widget>
+  <action name="openaction">
+   <property name="text">
+    <string>打开</string>
+   </property>
+   <property name="toolTip">
+    <string>打开</string>
+   </property>
+   <property name="shortcut">
+    <string>O</string>
+   </property>
+  </action>
+  <action name="closeaction">
+   <property name="text">
+    <string>退出</string>
+   </property>
+   <property name="toolTip">
+    <string>退出</string>
+   </property>
+   <property name="shortcut">
+    <string>Q</string>
+   </property>
+  </action>
+  <action name="action_X">
+   <property name="text">
+    <string>渲染</string>
+   </property>
+   <property name="toolTip">
+    <string>渲染</string>
+   </property>
+   <property name="shortcut">
+    <string>X</string>
+   </property>
+  </action>
+  <action name="cropaction">
+   <property name="text">
+    <string>分割</string>
+   </property>
+   <property name="toolTip">
+    <string>分割</string>
+   </property>
+   <property name="shortcut">
+    <string>C</string>
+   </property>
+  </action>
+  <action name="setaction">
+   <property name="text">
+    <string>设置</string>
+   </property>
+   <property name="toolTip">
+    <string>设置</string>
+   </property>
+   <property name="shortcut">
+    <string>S</string>
+   </property>
+  </action>
+  <action name="actionvalue">
+   <property name="text">
+    <string>value</string>
+   </property>
+  </action>
+  <action name="actionmax">
+   <property name="text">
+    <string>MaxValue</string>
+   </property>
+  </action>
+  <action name="actionminvalue">
+   <property name="text">
+    <string>MinValue</string>
+   </property>
+  </action>
+  <action name="actionslice_x">
+   <property name="text">
+    <string>slice_x</string>
+   </property>
+  </action>
+  <action name="actionslice_y">
+   <property name="text">
+    <string>slice_y</string>
+   </property>
+  </action>
+  <action name="actionslice_z">
+   <property name="text">
+    <string>slice_z</string>
+   </property>
+  </action>
+  <action name="actionvalue_2">
+   <property name="text">
+    <string>value</string>
+   </property>
+  </action>
+  <action name="actionvalue_max">
+   <property name="text">
+    <string>MaxValue</string>
+   </property>
+  </action>
+  <action name="actionvalue_min">
+   <property name="text">
+    <string>MinValue</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QVTKWidget</class>
+   <extends>QWidget</extends>
+   <header>QVTKWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="MainWidget.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>closeaction</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWidgetClass</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>430</x>
+     <y>332</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
